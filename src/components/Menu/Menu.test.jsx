@@ -10,7 +10,7 @@ const logoData = {
 };
 
 describe('<Menu />', () => {
-  it.skip('should render Logo and Main Menu Nav', () => {
+  it('should render Logo and Main Menu Nav', () => {
     const { container } = renderTheme(
       <Menu links={linksMock} logoData={logoData} />,
     );
@@ -53,7 +53,7 @@ describe('<Menu />', () => {
     expect(screen.getByLabelText('Open menu')).toBeInTheDocument();
   });
 
-  it.skip('should not render links', () => {
+  it('should not render links', () => {
     const { container } = renderTheme(<Menu logoData={logoData} />);
     expect(
       screen.queryByRole('navigation', { name: 'Main menu' }),
